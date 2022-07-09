@@ -5,3 +5,7 @@
 .date-label {
 	@apply text-center;
 }
+
+.bar {
+	@apply h-full w-full rounded-md bg-soft-red;
+}

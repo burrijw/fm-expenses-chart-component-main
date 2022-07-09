@@ -331,11 +331,6 @@ img, video {
   border-bottom-width: 2px;
 }
 
-.border-black {
-  --tw-border-opacity: 1;
-  border-color: rgb(0 0 0 / var(--tw-border-opacity));
-}
-
 .border-cream {
   --tw-border-opacity: 1;
   border-color: hsl(27 66% 92% / var(--tw-border-opacity));
@@ -402,6 +397,14 @@ img, video {
 
 .date-label {
   text-align: center;
+}
+
+.bar {
+  height: 100%;
+  width: 100%;
+  --tw-bg-opacity: 1;
+  background-color: hsl(10 79% 65% / var(--tw-bg-opacity));
+  border-radius: .375rem;
 }
 
 /*# sourceMappingURL=index.4d663569.css.map */
