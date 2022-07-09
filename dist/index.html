@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="/index.4d663569.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.3a4ddde5.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <script defer="" src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js"></script>
+  <title>Frontend Mentor | Expenses chart component</title>
+</head>
+
+
+<body class="grid place-items-center h-screen bg-cream relative">
+  <main id="container" class="flex flex-col gap-4 w-[343px]">
+    <!-- ** "My Balance" section **s -->
+    <section class="p-6 bg-soft-red rounded-xl flex justify-between align-center">
+      <!-- Balance -->
+      <div class="text-white">
+        <p class="text-[15px]">My balance</p>
+        <p class="text-2xl font-bold">$921.48</p>
+      </div>
+      <!-- Logo -->
+      <img class="my-auto" src="/logo.cd13699a.svg" alt="">
+    </section>
+    <!-- ** Chart section ** -->
+    <section class="bg-[#FFFBF6] rounded-xl p-6">
+      <!-- Heading -->
+      <p class="font-bold text-2xl mb-2">Spending - Last 7 days</p>
+      <!-- Chart -->
+      <div class="grid grid-cols-7 grid-rows-chart gap-3 text-xs text-medium-brown justify-between align-bottom h-[180px] pb-4 border-b-2 border-cream">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div class="date-label">mon</div>
+        <div class="date-label">tue</div>
+        <div class="date-label">wed</div>
+        <div class="date-label">thu</div>
+        <div class="date-label">fri</div>
+        <div class="date-label">sat</div>
+        <div class="date-label">sun</div>
+      </div>
+      <!-- Statistics -->
+      <div>
+        <div>
+          Total this month
+          $478.33
+        </div>
+        <div>
+          +2.4%
+          from last month
+        </div>
+      </div>
+    </section>
+  </main>
+  <div class="attribution absolute bottom-4 text-center text-xs">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend
+      Mentor</a>.
+    Coded by <a href="https://jburri.dev">Josh Burri</a>.
+  </div>
+</body>
+
+</html>
