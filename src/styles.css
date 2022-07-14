@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .date-label {
-	@apply text-center;
+	@apply text-center mt-2 lg:mt-3 lg:text-[15px];
 }
 
 .bar {

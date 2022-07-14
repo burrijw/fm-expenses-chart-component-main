@@ -20,34 +20,43 @@
 
 
 <body class="grid place-items-center h-screen bg-cream relative">
-  <main id="container" class="flex flex-col gap-4 w-[343px]" x-data="data">
+  <main id="container" class="flex flex-col gap-4 w-[343px] lg:w-[540]" x-data="data">
+
     <!-- ** "My Balance" section **s -->
     <section class="p-6 bg-soft-red rounded-xl flex justify-between align-center">
+
       <!-- Balance -->
       <div class="text-white">
         <p class="text-[15px]">My balance</p>
         <p class="text-2xl font-bold">$921.48</p>
       </div>
+
       <!-- Logo -->
       <img class="my-auto h-[40]" src="./images/logo.svg" alt="">
     </section>
+
     <!-- ** Chart section ** -->
-    <section class="bg-[#FFFBF6] rounded-xl p-6" x-data="data.balances">
+    <section class="bg-[#FFFBF6] rounded-xl p-6 lg:p-8 lg:py-10 lg:pb-12" x-data="data.balances">
+
       <!-- Heading -->
-      <p class=" font-bold text-dark-brown text-2xl mb-12">Spending - Last 7 days</p>
+      <p class=" font-bold text-dark-brown text-2xl mb-12 lg:mb-16 lg:text-3xl">Spending - Last 7
+        days</p>
+
       <!-- Chart -->
       <div x-data="data.maxAmount"
-        class="grid grid-cols-7 grid-rows-chart gap-3 text-xs text-medium-brown justify-between h-[200px] pb-6 border-b-2 border-cream items-end">
-        <!-- Generate graph bars for each day of the week -->
+        class="grid grid-cols-7 grid-rows-chart lg:gap-x-6 gap-x-3 pb-6 lg:pb-8 text-xs text-medium-brown justify-between border-b-2 border-cream items-end">
+
+        <!-- Bars -->
         <template x-for="(day, index) in balances" :key="index">
 
           <div x-data="{ showTooltip: false }" x-on:mouseover="showTooltip = true"
             x-on:mouseout="showTooltip = false" class="bar relative"
             :class="balances[index].amount == maxAmount ? 'bg-cyan' : 'bg-soft-red'"
             :style="{ height: `${balances[index].percentage}%`}">
+
             <!-- Tooltip -->
             <div
-              class="hidden lg:block absolute text-center top-0 left-1/2 transform -translate-x-1/2 -translate-y-10 rounded-md px-1 text-base bg-dark-brown text-white grid place-content-center"
+              class="hidden lg:block absolute text-center top-0 left-1/2 transform -translate-x-1/2 -translate-y-12 rounded-md px-2 py-2 text-lg bg-dark-brown text-white grid place-content-center"
               x-text="`$${balances[index].amount}`" x-show="showTooltip">
             </div>
           </div>
@@ -62,8 +71,8 @@
       <!-- Statistics -->
       <div class="flex justify-between mt-5">
         <div class="flex flex-col ">
-          <p class="text-[15px] text-medium-brown">Total this month</p>
-          <p class="text-3xl text-ellipsis font-bold">$478.33</p>
+          <p class="text-[15px] text-medium-brown lg:mb-2">Total this month</p>
+          <p class="text-3xl lg:text-5xl text-ellipsis font-bold">$478.33</p>
         </div>
         <div class="flex flex-col justify-end items-end">
           <p class="font-bold text-[15px]">+2.4%</p>
