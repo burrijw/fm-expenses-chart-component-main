@@ -1,7 +1,7 @@
 import Alpine from 'alpinejs'
-import balances from './balances';
+import { data } from './balances';
 
-Alpine.data('balances', balances)
+Alpine.data('data', data);
 
 // Init the alpine service
 window.Alpine = Alpine

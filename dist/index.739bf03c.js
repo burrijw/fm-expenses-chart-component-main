@@ -536,8 +536,7 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _alpinejs = require("alpinejs");
 var _alpinejsDefault = parcelHelpers.interopDefault(_alpinejs);
 var _balances = require("./balances");
-var _balancesDefault = parcelHelpers.interopDefault(_balances);
-(0, _alpinejsDefault.default).data("balances", (0, _balancesDefault.default));
+(0, _alpinejsDefault.default).data("data", (0, _balances.data));
 // Init the alpine service
 window.Alpine = (0, _alpinejsDefault.default);
 (0, _alpinejsDefault.default).start();
@@ -3213,10 +3212,22 @@ exports.export = function(dest, destName, get) {
 },{}],"axuf5":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "maxAmount", ()=>maxAmount);
+parcelHelpers.export(exports, "data", ()=>data);
 var _dataJson = require("../data.json");
 var _dataJsonDefault = parcelHelpers.interopDefault(_dataJson);
-exports.default = ()=>({
-        balances: (0, _dataJsonDefault.default)
+// find the max amount
+const amounts = (0, _dataJsonDefault.default).map((el)=>el.amount);
+const maxAmount = Math.max(...amounts);
+const data = ()=>({
+        maxAmount: maxAmount,
+        balances: (0, _dataJsonDefault.default).map((el)=>{
+            return {
+                day: el.day,
+                amount: el.amount,
+                percentage: Math.round(el.amount / maxAmount * 100)
+            };
+        })
     });
 
 },{"../data.json":"aLYkf","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"aLYkf":[function(require,module,exports) {

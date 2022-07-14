@@ -20,7 +20,7 @@
 
 
 <body class="grid place-items-center h-screen bg-cream relative">
-  <main id="container" class="flex flex-col gap-4 w-[343px]" x-data="balances">
+  <main id="container" class="flex flex-col gap-4 w-[343px]" x-data="data">
     <!-- ** "My Balance" section **s -->
     <section class="p-6 bg-soft-red rounded-xl flex justify-between align-center">
       <!-- Balance -->
@@ -32,15 +32,26 @@
       <img class="my-auto h-[40]" src="./images/logo.svg" alt="">
     </section>
     <!-- ** Chart section ** -->
-    <section class="bg-[#FFFBF6] rounded-xl p-6">
+    <section class="bg-[#FFFBF6] rounded-xl p-6" x-data="data.balances">
       <!-- Heading -->
-      <p class="font-bold text-dark-brown text-2xl mb-12">Spending - Last 7 days</p>
+      <p class=" font-bold text-dark-brown text-2xl mb-12">Spending - Last 7 days</p>
       <!-- Chart -->
-      <div
+      <div x-data="data.maxAmount"
         class="grid grid-cols-7 grid-rows-chart gap-3 text-xs text-medium-brown justify-between h-[200px] pb-6 border-b-2 border-cream items-end">
         <!-- Generate graph bars for each day of the week -->
         <template x-for="(day, index) in balances" :key="index">
-          <div class="bar"></div>
+
+          <div x-data="{ showTooltip: false }" x-on:mouseover="showTooltip = true"
+            x-on:mouseout="showTooltip = false" class="bar relative"
+            :class="balances[index].amount == maxAmount ? 'bg-cyan' : 'bg-soft-red'"
+            :style="{ height: `${balances[index].percentage}%`}">
+            <!-- Tooltip -->
+            <div
+              class="hidden lg:block absolute text-center top-0 left-1/2 transform -translate-x-1/2 -translate-y-10 rounded-md px-1 text-base bg-dark-brown text-white grid place-content-center"
+              x-text="`$${balances[index].amount}`" x-show="showTooltip">
+            </div>
+          </div>
+
         </template>
         <!-- Generate labels for the day of the week -->
         <template x-for="(day, index) in balances" :key="index">
@@ -62,7 +73,8 @@
     </section>
   </main>
   <div class="attribution absolute bottom-4 text-center text-xs">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend
+    Challenge by <a class="underline" href="https://www.frontendmentor.io?ref=challenge"
+      target="_blank">Frontend
       Mentor</a>.
     Coded by <a href="https://jburri.dev">Josh Burri</a>.
   </div>

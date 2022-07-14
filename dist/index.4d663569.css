@@ -262,6 +262,14 @@ img, video {
   position: relative;
 }
 
+.top-0 {
+  top: 0;
+}
+
+.left-1\/2 {
+  left: 50%;
+}
+
 .bottom-4 {
   bottom: 1rem;
 }
@@ -287,6 +295,10 @@ img, video {
   display: grid;
 }
 
+.hidden {
+  display: none;
+}
+
 .h-screen {
   height: 100vh;
 }
@@ -303,6 +315,20 @@ img, video {
   width: 343px;
 }
 
+.-translate-x-1\/2 {
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-y-10 {
+  --tw-translate-y: -2.5rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .grid-cols-7 {
   grid-template-columns: repeat(7, minmax(0, 1fr));
 }
@@ -313,6 +339,10 @@ img, video {
 
 .flex-col {
   flex-direction: column;
+}
+
+.place-content-center {
+  place-content: center;
 }
 
 .place-items-center {
@@ -347,6 +377,10 @@ img, video {
   border-radius: .75rem;
 }
 
+.rounded-md {
+  border-radius: .375rem;
+}
+
 .border-b-2 {
   border-bottom-width: 2px;
 }
@@ -371,8 +405,23 @@ img, video {
   background-color: rgb(255 251 246 / var(--tw-bg-opacity));
 }
 
+.bg-cyan {
+  --tw-bg-opacity: 1;
+  background-color: hsl(186 34% 60% / var(--tw-bg-opacity));
+}
+
+.bg-dark-brown {
+  --tw-bg-opacity: 1;
+  background-color: hsl(25 47% 15% / var(--tw-bg-opacity));
+}
+
 .p-6 {
   padding: 1.5rem;
+}
+
+.px-1 {
+  padding-left: .25rem;
+  padding-right: .25rem;
 }
 
 .pb-6 {
@@ -395,6 +444,11 @@ img, video {
 .text-xs {
   font-size: .75rem;
   line-height: 1rem;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .text-3xl {
@@ -421,19 +475,27 @@ img, video {
   color: hsl(28 10% 53% / var(--tw-text-opacity));
 }
 
+.underline {
+  text-decoration-line: underline;
+}
+
 .date-label {
   text-align: center;
 }
 
 .bar {
   width: 100%;
-  --tw-bg-opacity: 1;
-  background-color: hsl(10 79% 65% / var(--tw-bg-opacity));
   border-radius: 4px;
 }
 
-.bar:hover {
-  opacity: .8;
+@media (min-width: 1024px) {
+  .bar:hover {
+    --tw-bg-opacity: .8;
+  }
+
+  .lg\:block {
+    display: block;
+  }
 }
 
 /*# sourceMappingURL=index.4d663569.css.map */
