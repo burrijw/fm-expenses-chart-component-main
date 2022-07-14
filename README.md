@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Link](https://fm-expense-chart-jburri.wunderbucket.dev/)
+- Solution URL: [Link](https://62d08736c38a400061601b8b--leafy-pothos-ac5110.netlify.app/)
 - Source URL: [Github](https://github.com/burrijw/fm-expenses-chart-component-main)
 
 ## My process
