@@ -23,7 +23,7 @@ module.exports = {
         'sans': ['DM Sans']
       },
       gridTemplateRows: {
-        'chart': 'auto 24px'
+        'chart': '150px fit-content(24px)'
       }
     },
   },

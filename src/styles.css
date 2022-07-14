@@ -7,5 +7,5 @@
 }
 
 .bar {
-	@apply h-full w-full rounded-md bg-soft-red;
+	@apply w-full rounded-[4px] bg-soft-red hover:opacity-80;
 }

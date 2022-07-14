@@ -142,14 +142,14 @@
       this[globalName] = mainExports;
     }
   }
-})({"ShInH":[function(require,module,exports) {
+})({"cVgJb":[function(require,module,exports) {
 "use strict";
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
-module.bundle.HMR_BUNDLE_ID = "890e741a975ef6c8";
+module.bundle.HMR_BUNDLE_ID = "ba60c367739bf03c";
 /* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE, chrome, browser, globalThis, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
   HMRAsset,
@@ -531,18 +531,18 @@ function hmrAcceptRun(bundle, id) {
     acceptedAssets[id] = true;
 }
 
-},{}],"8lqZg":[function(require,module,exports) {
+},{}],"ebWYT":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _alpinejs = require("alpinejs");
 var _alpinejsDefault = parcelHelpers.interopDefault(_alpinejs);
-var _dataJson = require("./data.json");
-var _dataJsonDefault = parcelHelpers.interopDefault(_dataJson);
+var _balances = require("./balances");
+var _balancesDefault = parcelHelpers.interopDefault(_balances);
+(0, _alpinejsDefault.default).data("balances", (0, _balancesDefault.default));
+// Init the alpine service
 window.Alpine = (0, _alpinejsDefault.default);
-// const balances = balances;
-console.log((0, _dataJsonDefault.default));
 (0, _alpinejsDefault.default).start();
 
-},{"alpinejs":"69hXP","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./data.json":"aLYkf"}],"69hXP":[function(require,module,exports) {
+},{"alpinejs":"69hXP","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./balances":"axuf5"}],"69hXP":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>module_default);
@@ -3210,9 +3210,18 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}],"aLYkf":[function(require,module,exports) {
+},{}],"axuf5":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _dataJson = require("../data.json");
+var _dataJsonDefault = parcelHelpers.interopDefault(_dataJson);
+exports.default = ()=>({
+        balances: (0, _dataJsonDefault.default)
+    });
+
+},{"../data.json":"aLYkf","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"aLYkf":[function(require,module,exports) {
 module.exports = JSON.parse('[{"day":"mon","amount":17.45},{"day":"tue","amount":34.91},{"day":"wed","amount":52.36},{"day":"thu","amount":31.07},{"day":"fri","amount":23.39},{"day":"sat","amount":43.28},{"day":"sun","amount":25.48}]');
 
-},{}]},["ShInH","8lqZg"], "8lqZg", "parcelRequirec758")
+},{}]},["cVgJb","ebWYT"], "ebWYT", "parcelRequirec758")
 
-//# sourceMappingURL=index.975ef6c8.js.map
+//# sourceMappingURL=index.739bf03c.js.map
